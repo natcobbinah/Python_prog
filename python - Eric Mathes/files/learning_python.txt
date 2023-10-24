@@ -1,0 +1,15 @@
+In python, If you need to import a module from the standard library and a module
+that you wrote, place the import statement for the standard library module
+first. Then add a blank line and the import statement for the module you
+wrote. In programs with multiple import statements, this convention makes
+it easier to see where the different modules used in the program come from.
+
+In python, Every method call associated with an instance automatically passes self, which is
+a reference to the instance itself; it gives the individual instance access to
+the attributes and methods in the class. 
+
+In python, If you want a function to accept several different kinds of arguments, the
+parameter that accepts an arbitrary number of arguments must be placed
+last in the function definition. Python matches positional and keyword
+arguments first and then collects any remaining arguments in the final
+parameter.
