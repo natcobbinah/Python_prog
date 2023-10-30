@@ -18,3 +18,22 @@ print()
 #iterate through wordlist content
 for word in words.iter():
     print(word)
+
+words.delete('egg')
+
+print()
+
+#iterate through wordlist content
+for word in words.iter():
+    print(word)
+
+print()
+
+# search for a word
+print(words.search('ham'))
+
+# clear entire list
+words.clear()
+
+words.print()
+

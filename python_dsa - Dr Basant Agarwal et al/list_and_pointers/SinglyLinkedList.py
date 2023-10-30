@@ -30,6 +30,22 @@ class SinglyLinkedList:
         else:
             self.tail = node 
             self.head = node
+
+    #delete op   O(n)
+    def delete(self,data):
+        current = self.tail 
+        prev = self.tail
+        while current:
+            if current.data == data:
+                if current == self.tail:
+                    self.tail = current.next 
+                else:
+                    prev.next = current.next 
+                self.size -= 1 # keeping track of the size
+                return
+            prev = current
+            current = current.next
+
     
     # getting the size of the list by traversing(costy operation O(n))
     def sizeCostyOp(self):
@@ -47,6 +63,19 @@ class SinglyLinkedList:
             val = current.data
             current = current.next 
             yield val
+
+    # search through list
+    def search(self,data):
+        for node in self.iter():
+            if node == data:
+                return True 
+        return False
+    
+    # clear entire list
+    def clear(self):
+        """Clear entire list"""
+        self.tail = None 
+        self.head = None
     
     # print list content
     def print(self):

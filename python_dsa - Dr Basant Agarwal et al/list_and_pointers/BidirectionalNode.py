@@ -1,6 +1,6 @@
 class BidirectionalNode:
 
-    def __init__(self, data = None):
+    def __init__(self, data = None, next= None, prev=None):
         self.data = data 
-        self.next = None 
-        self.previous = None
+        self.next = next 
+        self.prev = prev
