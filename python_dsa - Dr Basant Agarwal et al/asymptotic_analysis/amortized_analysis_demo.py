@@ -13,6 +13,8 @@ def test2(n):
         ls.append(t)
     return ls
 
+# irrespective of the 
+
 n = 1000
 plt.plot(test2(n))
 plt.plot([x*x/10_000_000 for x in range(n)])
