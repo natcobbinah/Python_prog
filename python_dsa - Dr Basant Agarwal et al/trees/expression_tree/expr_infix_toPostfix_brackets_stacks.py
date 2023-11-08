@@ -8,6 +8,8 @@ math_expr = "( 1 + 2 ) * 3"
 
 
 def rank(term):
+    if term == "^":
+        return 3
     if term == "*" or term == "/":
         return 2
     elif term == "+" or term == "-":

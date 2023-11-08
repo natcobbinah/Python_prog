@@ -37,3 +37,10 @@ class HashTable:
             h = (h + 1) % self.size 
         return None
 
+    # using [] with the hashTable
+    def __setitem__(self,key,value):
+        self.put(key,value)
+    
+    def __getitem__(self,key):
+        return self.get(key)
+
