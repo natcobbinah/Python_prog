@@ -13,4 +13,3 @@ for i in range(10):
     n = h.pop()
     print(n)
     print(h.heap)
-
