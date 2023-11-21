@@ -1,6 +1,8 @@
 def partition(unsorted_array, first_index, last_index):
-    # the assumption here is we're taking the first_index as our pivot
+    if first_index == last_index:
+        return first_index
 
+    # the assumption here is we're taking the first_index as our pivot
     pivot = unsorted_array[first_index]
     pivot_index = first_index
     index_of_last_element = last_index
@@ -31,16 +33,19 @@ def partition(unsorted_array, first_index, last_index):
     return less_than_pivot_index
 
 
-def quick_sort(unsorted_array, first, last):
-    if last - first <= 0:
-        return
-    else:
-        partition_point = partition(unsorted_array, first, last)
-        quick_sort(unsorted_array, first, partition_point - 1)
-        quick_sort(unsorted_array, partition_point + 1, last)
+def quick_select(array_list,left, right, k):
 
+    split = partition(array_list, left, right)
+
+    if split == k:
+        return array_list[split]
+    elif split < k:
+        return quick_select(array_list, split + 1, right, k)
+    else:
+        return quick_select(array_list, left, split - 1, k)
+    
 
 store = [45,23,87,12,72,4,54,32,52]
-print(store)
-quick_sort(store, 0,8)
-print(store)
+
+third_smallest_element = quick_select(store,0,8,2)
+print(third_smallest_element)
