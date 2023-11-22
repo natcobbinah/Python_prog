@@ -2,7 +2,7 @@ from custom_stack import Stack
 
 stack = Stack()
 
-math_expr = "( 1 + 2 ) * 3"
+math_expr = "( 1 + ( 4 + 5 + 2 ) - 3 ) + ( 6 + 8 )"
 
 # rank function to determine operator precedence
 
@@ -48,4 +48,4 @@ def toPostfix(expr):
     return postfix_expr
 
 
-#print(toPostfix(math_expr))  # 1 2 + 3 *
+print(toPostfix(math_expr))  # 1 2 + 3 *
