@@ -31,9 +31,8 @@ data2 = ([
 ])
 # to use the standard-scaler, to make all the data have a similar mean, that is, a zero mean, and a
 # unit variance across the data, we apply the standard-scaler algorithm
-stand_scalar = StandardScaler().fit(data2)
-results = stand_scalar.transform(data2)
-print(results)
+stand_scalar = StandardScaler().fit(data2).transform(data2)
+print(stand_scalar)
 
 print()
 
