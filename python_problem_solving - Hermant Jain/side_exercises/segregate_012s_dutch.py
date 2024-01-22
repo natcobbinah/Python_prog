@@ -4,17 +4,18 @@ def segregate_012s(userlist):
     high = len(userlist) - 1
     while mid <= high:
         if userlist[mid] == 0:
-            swap(userlist,low,mid)
+            swap(userlist, low, mid)
             low = low + 1
             mid = mid + 1
 
         elif userlist[mid] == 1:
             mid = mid + 1
-        
+
         elif userlist[mid] == 2:
             swap(userlist, mid, high)
             high = high - 1
     return userlist
+
 
 def swap(user_list, i, j):
     temp = user_list[i]
@@ -23,5 +24,7 @@ def swap(user_list, i, j):
     return user_list
 
 
-user_list = [0,1,1,0,1,2,1,2,0,0,0,1]
+user_list = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
+userlist2 = [0, 0, 1, 1, 2, 1, 0, 1, 0, 2, 2]
 print(segregate_012s(user_list))
+print(segregate_012s(userlist2))
